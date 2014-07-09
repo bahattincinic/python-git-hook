@@ -10,9 +10,8 @@ The commit hook will automatically be called when you are running `git commit`.
 Screenshots
 ------
 
-![alt text](https://cloud.githubusercontent.com/assets/1684999/3529832/20d0e75a-079e-11e4-96a6-b318ecc2214f.png)
-
-![alt text](https://cloud.githubusercontent.com/assets/1684999/3529887/a8619318-079e-11e4-9a09-12fdda1118f0.png)
+![alt text](https://cloud.githubusercontent.com/assets/1684999/3529919/f39c73d4-079e-11e4-85d8-f1a379cc2cc8.png)
+![alt text](https://cloud.githubusercontent.com/assets/1684999/3529923/00b296d4-079f-11e4-9d43-d463511792ca.png)
 
 
 Checklist
