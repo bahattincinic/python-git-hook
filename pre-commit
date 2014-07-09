@@ -41,7 +41,7 @@ CHECKS = [
     {
         'output': 'Checking for console.log()...',
         'command': 'grep -n console.log %s',
-        'match_files': ['.*yipit/.*\.js$'],
+        'match_files': ['.*\.js$'],
         'print_filename': True,
         'exists': False,
         'package': ''
