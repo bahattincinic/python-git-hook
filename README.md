@@ -1,4 +1,4 @@
-PEP8 Git Commit Hook
+Git Commit Hook
 ====================
 Pre-commit hook for Git checking Python and Javascript code quality
 
