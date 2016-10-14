@@ -76,7 +76,7 @@ CHECKS = [
 ]
 
 
-def hilite(text, status):
+def highlight(text, status):
     attrs = []
     colors = {
         'green': '32', 'red': '31', 'yellow': '33'
@@ -94,7 +94,7 @@ def exists(cmd, error=True):
     query = 'which %s' % cmd
     code = subprocess.call(query.split(), **params)
     if code != 0 and error:
-        print hilite('not installed %(command)s' % {'command': cmd}, 'yellow')
+        print(highlight('not installed %(command)s' % {'command': cmd}, 'yellow'))
         sys.exit(1)
 
 
@@ -112,7 +112,7 @@ def system(*args, **kwargs):
 
 def check_files(files, check):
     result = 0
-    print hilite(check['output'], 'yellow')
+    print(highlight(check['output'], 'yellow'))
 
     if check['exists'] and check['package']:
         exists(check['package'])
@@ -131,9 +131,9 @@ def check_files(files, check):
                         prefix = '\t'
                     output_lines = ['%s%s' % (prefix, line) for line in
                                     out.splitlines()]
-                    print hilite('\n'.join(output_lines), 'red')
+                    print(highlight('\n'.join(output_lines), 'red'))
                     if err:
-                        print hilite(err, 'red')
+                        print(highlight(err, 'red'))
                     result = 1
     return result
 
@@ -152,7 +152,7 @@ def main():
 
     result = 0
 
-    print hilite('Running Django Code Validator...', 'yellow')
+    print(highlight('Running Django Code Validator...', 'yellow'))
     if exists('$VIRTUAL_ENV/bin/python', error=False):
         return_code = subprocess.call('$VIRTUAL_ENV/bin/python manage.py '
                                       'validate', shell=True)
