@@ -146,7 +146,7 @@ def main():
     files = []
     out, err = system('git', 'status', '--porcelain')
     for line in out.splitlines():
-        match = modified.match(line)
+        match = modified.match(str(line))
         if match:
             files.append(match.group('name'))
 
